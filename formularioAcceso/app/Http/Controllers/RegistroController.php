@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Request\RegistroRequest;
+use App\Http\Requests\RegistroRequest;
 use App\Models\User;
 
 class RegistroController extends Controller
@@ -14,6 +14,6 @@ class RegistroController extends Controller
     }
 
     public function register(RegistroRequest $request){
-        $user = User::create($request->validated);
+        $user = User::create($request->validated());
     }
 }
