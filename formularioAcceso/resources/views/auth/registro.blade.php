@@ -7,6 +7,22 @@
     <title>Registro</title>
 </head>
 <body>
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    @if(session('mensaje'))
+        <div class="alert alert-success">
+            <p>{{ session('mensaje') }}</p>
+        </div>
+    @endif
+    
     <form action="/registro" method="POST">
         @csrf
         <input type="text" name="nombre">

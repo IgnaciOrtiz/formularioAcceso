@@ -15,5 +15,6 @@ class RegistroController extends Controller
 
     public function register(RegistroRequest $request){
         $user = User::create($request->validated());
+        return back()->with('mensaje', 'Registro añadido correctamente.');
     }
 }
