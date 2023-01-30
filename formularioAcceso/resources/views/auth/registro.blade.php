@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/app.css" type="text/css" rel="stylesheet" >
-    <title>Registro</title>
-    
+    <title>Registro</title>  
 </head>
 <body>
     @if($errors->any())
